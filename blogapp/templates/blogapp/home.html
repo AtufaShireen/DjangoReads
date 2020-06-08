@@ -1,0 +1,28 @@
+{%extends 'blogapp/base.html'%}
+{%block link%}
+{%load static%}
+<link rel="stylesheet" href="{%static 'blogapp/home.css'%}" type="text/css">
+{%endblock link%}
+
+{% load humanize %}
+{%block body%}
+
+<section class="cards-wrapper">
+    {%for post in posts%}
+    <div class="card-grid-space">
+        <div class="num">{{forloop.counter}}</div>
+        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+           style="&#45;&#45;bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+            <div>
+                <h1>{{post.title}}</h1>
+                <p>{{post.subtitle}}</p>
+                <div class="date">Published On {{post.published|naturaltime}}</div>
+                <div class="tags">
+                    <div class="tag">By {{post.author}}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {%endfor%}
+</section>
+{%endblock body%}
