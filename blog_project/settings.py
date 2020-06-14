@@ -31,14 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blogapp.apps.BlogappConfig',
+    'blogapp',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.humanize'    #show this part and also use |appnumber
+    'django.contrib.humanize',
+
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,8 @@
 {%extends 'blogapp/base.html'%}
-{%block link%}
+{%block css%}
 {%load static%}
 <link rel="stylesheet" href="{%static 'blogapp/home.css'%}" type="text/css">
-{%endblock link%}
+{%endblock css%}
 
 {% load humanize %}
 {%block body%}
@@ -14,9 +14,9 @@
         <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
            style="&#45;&#45;bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
             <div>
-                <h1>{{post.title}}</h1>
-                <p>{{post.subtitle}}</p>
-                <div class="date">Published On {{post.published|naturaltime}}</div>
+                <h3>{{post.title}}</h3>
+                <p>{{post.content|slice:"43"}}..</p>
+                <div class="date">Published {{post.date_posted|naturaltime}}</div>
                 <div class="tags">
                     <div class="tag">By {{post.author}}</div>
                 </div>

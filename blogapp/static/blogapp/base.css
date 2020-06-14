@@ -1,13 +1,14 @@
-html, body
+html
 {
     height: 100%;
 }
+body{
 
-
+    background-color: #a8a0b93d;
+}
 
 nav
 {
-    position: absolute;
     top: 6%;
     right: 0;
     left: 0;
@@ -125,22 +126,26 @@ nav a:nth-child(3):hover ~ #indicator
 }
 .info {
   font-size: 1.2em;
-  height: 3em;
+  height: 2em;
 }
 
 .info img {
-  height: 3em;
+  height: 2em;
   margin-right: 0.5em;
 }
 
 @media screen and (max-width: 450px) {
+nav a {
+    padding:10px 5px;
+    }
   .info {
-    padding:0;
+    padding:1px 2px 2px 2px;
   }
 
 }
 @media screen and (max-width: 900px) {
   .info {
     justify-content: left;
+    padding:1px 2px 2px 2px;
   }
 }

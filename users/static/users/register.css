@@ -1,0 +1,238 @@
+
+        /* style Css3 */
+
+*{box-sizing:border-box;}
+
+body{perspective:500px; background:#131111;}
+
+/*Style css3*/
+
+/*Start Card */
+
+.card
+{
+
+    width:300px;
+    height:400px;
+    margin:50px auto;
+    position:relative;
+    transition:all 2s ease-in-out;
+    -webkit-transform-style:preserve-3d; /*Google chrome*/
+    -moz-transform-style:preserve-3d; /*Firefox*/
+    -o-transform-style:preserve-3d; /*Firefox*/
+    -ms-transform-style:preserve-3d; /*Internet Explorer*/
+    transform-style:preserve-3d;
+}
+
+.card:hover
+{
+
+    -webkit-transform: rotateY(180deg); /*Google chrome*/
+    -moz-transform: rotateY(180deg); /*Firefox*/
+    -o-transform: rotateY(180deg); /*Firefox*/
+    -ms-transform: rotateY(180deg); /*Internet Explorer*/
+    transform: rotateY(180deg);
+}
+
+.card > div
+{
+
+    width:100%;
+    height:100%;
+    color:#FFF;
+    text-align:center;
+    font:10px tahoma;
+    position:absolute;
+    top:0;
+    left:0;
+     -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    text-transform:uppercase;
+}
+
+/*End Card*/
+
+
+/* Start front */
+
+.front{z-index:2;}
+
+.front
+{
+
+     -webkit-backface-visibility:hidden; /*Google chrome*/
+    -moz-backface-visibility:hidden; /*Firefox*/
+    -o-backface-visibility:hidden; /*Firefox*/
+    -ms-backface-visibility:hidden; /*Internet Explorer*/
+    backface-visibility:hidden;
+    border:2px solid #42E449;
+    background-color:#131111;
+
+}
+
+.front h2{margin: 21px 0;}
+
+.front .forms input{margin-bottom:20px;}
+
+.front .forms input[type="text"]
+{
+
+    width:80%;
+    border:1px solid #2BAF85;
+    background:none;
+    padding:10px;
+     -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#42E449;
+    text-transform:capitalize;
+}
+
+.front .forms input[type="email"]
+{
+
+    width:80%;
+    border:1px solid #2BAF85;
+    background:none;
+    padding:10px;
+    -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#42E449;
+    text-transform:capitalize;
+}
+
+.front .forms input[type="password"]
+{
+
+    width:80%;
+    border:1px solid #2BAF85;
+    background:none;
+    padding:10px;
+    -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#42E449;
+    text-transform:capitalize;
+}
+
+.front .forms input[type="submit"]
+{
+
+    width:40%;
+    border:1px solid #15D133;
+    background:none;
+    padding:10px;
+    -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#15D133;
+    text-transform:capitalize;
+}
+
+.front .forms input[type="submit"]:hover
+{background-color:#15D133; color:#FFF;}
+
+
+/* End front */
+
+
+/* Start back */
+
+.back{z-index:1;}
+
+.back
+{
+
+     -webkit-backface-visibility:hidden; /*Google chrome*/
+    -moz-backface-visibility:hidden; /*Firefox*/
+    -o-backface-visibility:hidden; /*Firefox*/
+    -ms-backface-visibility:hidden; /*Internet Explorer*/
+    backface-visibility:hidden;
+    border:2px solid #E20AB7;
+    -webkit-transform: rotateY(180deg);
+}
+
+.back h2{margin: 21px 0;}
+
+.back .forms input{margin-bottom:20px;}
+
+.back .forms input[type="text"]
+{
+
+    width:80%;
+    border:1px solid #BB154A;
+    background:none;
+    padding:10px;
+     -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#42E449;
+    text-transform:capitalize;
+}
+
+.back .forms input[type="email"]
+{
+
+    width:80%;
+    border:1px solid #BB154A;
+    background:none;
+    padding:10px;
+    -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#42E449;
+    text-transform:capitalize;
+}
+
+.back .forms input[type="password"]
+{
+
+    width:80%;
+    border:1px solid #BB154A;
+    background:none;
+    padding:10px;
+    -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#42E449;
+    text-transform:capitalize;
+}
+
+.back .forms input[type="submit"]
+{
+
+    width:40%;
+    border:1px solid #E20AB7;
+    background:none;
+    padding:10px;
+    -webkit-border-radius:4px; /*Google chrome*/
+    -moz-border-radius:4px; /*Firefox*/
+    -o-border-radius:4px; /*Firefox*/
+    -ms-border-radius:4px; /*Internet Explorer*/
+    border-radius:4px;
+    color:#E20AB7;
+    text-transform:capitalize;
+}
+
+.back .forms input[type="submit"]:hover
+{background-color:#E20AB7; color:#FFF;}
+
+/* End back */
