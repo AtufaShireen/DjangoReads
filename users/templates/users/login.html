@@ -1,4 +1,5 @@
 {% extends "blogapp/base.html" %}
+
 {%block css%}
 {%load static%}
 <link rel="stylesheet" href="{%static 'users/register.css'%}" type="text/css">
@@ -8,7 +9,7 @@
 <section class="login-panel">
     <div class="left-side"></div>
     <div class="right-side">
-        <h1>Sign Up<br>
+        <h1>LogIn<br>
         <span>write or read free django blogs</span>
             </h1>
         <form method='post'>
@@ -18,9 +19,11 @@
         </form>
 
         <small class="text-muted">
-            Already Have An Account? <a class="ml-2" href="{% url 'login' %}">LogIn</a>
+             Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
         </small>
 
     </div>
 </section>
 {% endblock body %}
+
+

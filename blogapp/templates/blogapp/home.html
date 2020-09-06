@@ -1,6 +1,6 @@
 {%extends 'blogapp/base.html'%}
-{%block css%}
 {%load static%}
+{%block css%}
 <link rel="stylesheet" href="{%static 'blogapp/home.css'%}" type="text/css">
 {%endblock css%}
 
@@ -12,7 +12,7 @@
     <div class="card-grid-space">
         <div class="num">{{forloop.counter}}</div>
         <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
-           style="&#45;&#45;bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+           style="&#45;&#45;bg-img: url({{post.bg_pic.url}})">
             <div>
                 <h3>{{post.title}}</h3>
                 <p>{{post.content|slice:"43"}}..</p>

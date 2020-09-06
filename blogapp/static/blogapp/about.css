@@ -1,7 +1,3 @@
-body {
-  background-color: #a8a0b93d;
-}
-
 .content {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
@@ -34,7 +30,6 @@ body {
   text-justify: inter-word;
   grid-column: 1 / span 2;
   grid-row: 3;
-  margin-bottom: -20px;
 }
 
 .title {
@@ -130,8 +125,6 @@ a {
   display: inline-block;
   position: relative;
 }
-
-
 
 .highlight:before {
       content: '';
