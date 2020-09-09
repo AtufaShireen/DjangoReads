@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from PIL import Image
-
+from django.urls import reverse
 # declare a new model with a name "Post"
 class Post(models.Model):
     title = models.CharField(max_length=100)
@@ -12,9 +12,12 @@ class Post(models.Model):
 
     bg_pic = models.ImageField(default='def.png', upload_to='post_pics')
 
-    # renames the instances of the model with their title name
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('post-detail',kwargs={'pk':self.pk})
+
     def save(self, *args, **kwargs):
         super(Post, self).save(*args, **kwargs)
         pat=self.bg_pic.path

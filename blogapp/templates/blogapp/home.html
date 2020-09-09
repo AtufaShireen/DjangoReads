@@ -10,8 +10,7 @@
 <section class="cards-wrapper">
     {%for post in posts%}
     <div class="card-grid-space">
-        <div class="num">{{forloop.counter}}</div>
-        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+        <a class="card" href="{%url 'post-detail' post.id%}"
            style="&#45;&#45;bg-img: url({{post.bg_pic.url}})">
             <div>
                 <h3>{{post.title}}</h3>

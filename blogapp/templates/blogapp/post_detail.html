@@ -1,0 +1,23 @@
+{%extends 'blogapp/base.html'%}
+{%load static%}
+{%block css%}
+<link rel="stylesheet" href="{%static 'blogapp/home.css'%}" type="text/css">
+{%endblock css%}
+{%block body%}
+{% load humanize %}
+<img src="{{post.bg_pic.url}}">
+<div>
+    <h3>{{post.title}}</h3>
+    <p>{{post.content}}</p>
+    <div class="date">Published {{post.date_posted|naturaltime}}</div>
+    <div>
+        {%if object.author == user%}
+        <a href="{%url 'update' object.id%}">Update</a>
+        <a href="{%url 'delete' object.id%}">Delete</a>
+        {%endif%}
+    </div>
+    <div class="tags">
+        <div class="tag">By {{post.author}}</div>
+    </div>
+</div>
+{%endblock body%}

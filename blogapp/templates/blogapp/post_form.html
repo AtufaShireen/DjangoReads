@@ -1,0 +1,71 @@
+{%extends 'blogapp/base.html'%}
+{%load static%}
+{%block css%}
+<link rel="stylesheet" href="{%static 'users/profile.css'%}" type="text/css">
+{%endblock css%}
+{%load widget_tweaks%}
+{%block body%}
+
+<div class="content2">
+    <form method='POST' enctype="multipart/form-data">
+        <div class="sttng">
+            {%csrf_token%}
+            {%for hidden in form.hidden_fields%}
+            {{hidden}}
+            {%endfor%}
+            {%for field in form.visible_fields%}
+            <div class="form-group">
+
+                {% if field.name == 'bg_pic' %}
+                <div id='profile-upload'>
+                    <div class="hvr-profile-img">
+                        {%if field.help_text%}
+                        {{field.help_text}}
+                        {%endif%}
+
+                        {{ field|add_class:"upload"|attr:"id=getval" }}
+                        <div class="icon">
+                            <div class="camera4"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                {% elif field.name == 'bio' %}
+                <label for="{{field.id_for_label}}">{{field.label}}</label>
+                {{ field|add_class:"bio" }}
+
+                {%else%}
+                <label for="{{field.id_for_label}}">{{field.label}}</label>
+                {{field|add_class:'form-control'}}
+                {%endif%}
+                {%for error in field.errors%}
+                <span class="help-block">{{error}}</span>
+                {%endfor%}
+            </div>
+            {%endfor%}
+            <div class="buttons">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-ok"></span> Post
+                </button>
+                <a href="{% url 'blog-home' %}" class="btn btn-default">Cancel</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+{%endblock%}
+{%block js%}
+
+document.getElementById('getval').addEventListener('change', readURL, true);
+function readURL(){
+var file = document.getElementById("getval").files[0];
+var reader = new FileReader();
+reader.onloadend = function(){
+document.getElementById('profile-upload').style.backgroundImage = "url(" + reader.result + ")";
+}
+if(file){
+reader.readAsDataURL(file);
+}else{
+}
+}
+{%endblock%}

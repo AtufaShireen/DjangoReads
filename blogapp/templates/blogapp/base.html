@@ -25,8 +25,8 @@
 </section>
 <nav>
     <a href="{%url 'blog-home'%}" class="nav-item">DjangoReads</a>
-    <a href="{%url 'about'%}" class="nav-item">About</a>
     {%if user.is_authenticated%}
+    <a href="{%url 'create'%}" class="nav-item">New Post</a>
     <a href="{%url 'profile'%}" class="nav-item">Profile</a>
     <a href="{%url 'logout'%}" class="nav-item">Logout</a>
     {%else%}

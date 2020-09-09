@@ -1,0 +1,117 @@
+form{
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    max-width: 1064px;
+    background: #fff;
+    padding: 15px 15px 0px 5px;
+    height: auto;
+    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    margin: 40px 70px 0 70px;
+}
+.buttons {
+    align-self: flex-end;
+    max-height: max-content;
+    position: absolute;
+    margin: 50px;
+}
+.camera4{
+  display:block;
+  width:70%;
+  height:50%;
+  position:absolute;
+  top:30%;
+  left:15%;
+  background-color:#000;
+  border-radius:5px;
+}
+.camera4:after{
+  content:"";
+  display:block;
+  width:15px;
+  height:15px;
+  border:7px solid #fff;
+  position:absolute;
+  top:15%;
+  left:25%;
+  background-color:#000;
+  border-radius:15px;
+}
+.camera4:before{
+  content:"";
+  display:block;
+  width:50%;
+  height:10px;
+  position:absolute;
+  top:-16%;
+  left:25%;
+  background-color:#000;
+  border-radius:10px;
+}
+
+#profile-upload{
+    background-image:url('');
+    background-size:cover;
+    background-position: center;
+    height: 230px; width: 230px;
+    border: 1px solid #bbb;
+    position:relative;top:20px;
+  border-radius:50%;
+  overflow:hidden;
+
+
+  float:left;margin-right:30px;margin-bottom:0px;
+
+}
+#profile-upload:hover input.upload{
+  display:block;
+}
+#profile-upload:hover {
+  border: 1px solid gray
+}
+#profile-upload:hover .hvr-profile-img{
+  opacity:1;
+ }
+.hvr-profile-img{
+opacity:.3;
+font-size:0px;
+}
+.icon{
+ width:75px;
+  height:75px;
+
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#profile-upload input.upload {
+    z-index:1;
+    left: 0;
+    margin: 0;
+    bottom: 0;
+    top: 0;
+    padding: 0;
+    opacity: 0;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+
+    width:100%;
+    display:none;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+#profile-upload{
+width:150px;
+margin-left:70px;
+}
+}

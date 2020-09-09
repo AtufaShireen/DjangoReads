@@ -5,11 +5,10 @@ flex-direction: row-reverse;
 justify-content: flex-end;
 max-width:1064px;
 background:#fff;
-padding:15px;
+padding:15px 15px 0px 5px;
 height:auto;
 font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 border-radius:3px;
-padding-top:30px;
  -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
 margin: 40px 70px 0 70px;
  }
@@ -85,8 +84,6 @@ display:flex;
   background-color:#000;
   border-radius:10px;
 }
-
-
 
 #profile-upload{
     background-image:url('');
