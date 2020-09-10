@@ -1,16 +1,16 @@
+
 form{
-position:absolute;
-display: flex;
-flex-direction: row-reverse;
-justify-content: flex-end;
-max-width:1064px;
-background:#fff;
-padding:15px 15px 0px 5px;
-height:auto;
-font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-border-radius:3px;
- -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
-margin: 40px 70px 0 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    max-width: 1064px;
+    background: #fff;
+    padding: 15px 15px 0px 5px;
+    height: auto;
+    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    margin: 40px 70px 0 70px;
  }
 
 .buttons{

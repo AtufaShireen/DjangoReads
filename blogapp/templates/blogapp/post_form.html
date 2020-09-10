@@ -1,7 +1,7 @@
 {%extends 'blogapp/base.html'%}
 {%load static%}
 {%block css%}
-<link rel="stylesheet" href="{%static 'users/profile.css'%}" type="text/css">
+<link rel="stylesheet" href="{%static 'blogapp/post_form.css'%}" type="text/css">
 {%endblock css%}
 {%load widget_tweaks%}
 {%block body%}
@@ -42,7 +42,7 @@
                 {%endfor%}
             </div>
             {%endfor%}
-            <div class="buttons">
+            <div class="form-group buttons">
                 <button type="submit" class="btn btn-success">
                     <span class="glyphicon glyphicon-ok"></span> Post
                 </button>

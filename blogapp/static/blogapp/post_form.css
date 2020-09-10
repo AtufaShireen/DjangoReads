@@ -1,23 +1,21 @@
 form{
-    position: absolute;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    max-width: 1064px;
-    background: #fff;
-    padding: 15px 15px 0px 5px;
-    height: auto;
-    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-    border-radius: 3px;
+    max-width: 571px;
+    height: 435px;
+    margin: 0 auto;
+    border-radius: 22px;
+    padding: 20px 15px 0 0;
     -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
-    margin: 40px 70px 0 70px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
 }
 .buttons {
-    align-self: flex-end;
     max-height: max-content;
     position: absolute;
-    margin: 50px;
+    bottom: 113px;
+    right: 561px;
 }
+
 .camera4{
   display:block;
   width:70%;
@@ -53,17 +51,19 @@ form{
 }
 
 #profile-upload{
-    background-image:url('');
-    background-size:cover;
-    background-position: center;
-    height: 230px; width: 230px;
-    border: 1px solid #bbb;
-    position:relative;top:20px;
-  border-radius:50%;
-  overflow:hidden;
-
-
-  float:left;margin-right:30px;margin-bottom:0px;
+    background-image: url(post_form.css);
+    background-size: cover;
+    background-position: center center;
+    height: 286px;
+    width: 205px;
+    border: 1px solid rgb(187, 187, 187);
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    bottom: 372px;
+    right: 221px;
+    float: left;
+    margin-bottom: 0px;
 
 }
 #profile-upload:hover input.upload{
@@ -114,4 +114,15 @@ font-size:0px;
 width:150px;
 margin-left:70px;
 }
+.sttng{
+    width: min-content;
+}
+form{
+padding:20px 0 0 0;
+}
+.buttons{
+    position: absolute;
+    bottom: 100px;
+    right: 218px;
+    }
 }
